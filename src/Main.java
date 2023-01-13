@@ -25,22 +25,22 @@ public class Main {
         }
         System.out.println();
         System.out.println("Task 3");
-        int population = 12_000_000;
+        double population = 12_000_000;
         int birthRate = 17;
         int mortality = 8;
         for (int i = 1; i < 11; i++){
             population += population / 1000 * birthRate - population / 1000 * mortality;
-            System.out.println("Год " + i + ", численность населения составляет " + population);
+            System.out.println("Год " + i + ", численность населения составляет " + String.format("%.2f",population));
         }
     }
     public static void task4_8(){
         System.out.println("Task 4");
-        int contribution = 15_000;
+        double contribution = 15_000;
         int countMonth = 0;
         while (contribution < 12_000_000){
             contribution += contribution / 100 * 7;
             countMonth++;
-            System.out.println("Месяц " + countMonth + ", сумма накоплений " + contribution + " рублей");
+            System.out.println("Месяц " + countMonth + ", сумма накоплений " + String.format("%.2f",contribution) + " рублей");
         }
         System.out.println("Task 5");
         contribution = 15_000;
@@ -49,7 +49,7 @@ public class Main {
             contribution += contribution / 100 * 7;
             countMonth++;
             if (countMonth % 6 == 0){
-                System.out.println("Месяц " + countMonth + ", сумма накоплений " + contribution + " рублей");
+                System.out.println("Месяц " + countMonth + ", сумма накоплений " + String.format("%.2f",contribution) + " рублей");
         }
         }
         System.out.println("Месяц " + countMonth + ", сумма накоплений " + contribution + " рублей");
@@ -58,7 +58,7 @@ public class Main {
         for (countMonth = 0; countMonth <= 9 * 12; countMonth++){
             contribution += contribution / 100 * 7;
             if (countMonth % 6 == 0){
-                System.out.println("Месяц " + countMonth + ", сумма накоплений " + contribution + " рублей");
+                System.out.println("Месяц " + countMonth + ", сумма накоплений " + String.format("%.2f",contribution) + " рублей");
             }
         }
         System.out.println("Task 7");
